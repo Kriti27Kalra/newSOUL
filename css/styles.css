@@ -308,7 +308,7 @@ a:hover {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: flex-end;
     /* width: 65%; */
 }
 }
@@ -345,8 +345,8 @@ a:hover {
          cursor: pointer;
          -webkit-transition: 500ms;
          transition: 500ms;
-         position: static !important;
          top: 1px;
+         
       }
 
 
@@ -2904,3 +2904,32 @@ display:none;
 .site-footer__social a:hover {
   color: #ff4081; /* pinkish hover */
 }
+
+
+
+
+
+.donation-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  text-align: justify;
+  margin: 15px auto;
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .donation-text {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;   /* change to center if you prefer */
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
