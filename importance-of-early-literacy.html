@@ -2182,22 +2182,29 @@ dfn, cite, em  {
   border-left: 5px solid #ff5528;
   padding-left: 12px;
   letter-spacing: 0.5px;
+  line-height: 1.3;
 }
 
-/* For tablets */
-@media (max-width: 768px) {
+/* Tablets */
+@media (max-width: 991px) {
   .custom-event-title {
-    font-size: 24px;
+    font-size: 32px; /* Bigger on tablets */
   }
 }
 
-/* For mobile phones */
+/* Large mobiles */
+@media (max-width: 767px) {
+  .custom-event-title {
+    font-size: 34px; /* Even bigger */
+  }
+}
+
+/* Small mobiles */
 @media (max-width: 480px) {
   .custom-event-title {
-    font-size: 24px;
+    font-size: 36px; /* Biggest on small phones */
   }
 }
-
 
 
 </style>
