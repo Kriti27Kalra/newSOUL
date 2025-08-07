@@ -2436,14 +2436,49 @@ img.mob-location-icon {
 .office-block {
   margin-bottom: 21px;
   border: solid;
-  text-align: center;
 }
 
-.single_feature,
-.single_feature p,
-.single_feature h3 {
-  text-align: center !important;
+/* Always center content inside .single_feature */
+.single_feature {
+  text-align: center;
+  padding: 10px; /* optional: spacing inside the box */
 }
+
+/* Make sure <h3> and <p> inside are centered */
+.single_feature h3,
+.single_feature p {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 768px) {
+  .office-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  .single_feature {
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .single_feature h3,
+  .single_feature p {
+    font-size: 16px; /* optional: adjust font size for better readability */
+    
+  }
+}
+.single_feature h3 {
+  text-align: center;
+  margin: 0 auto 20px auto; /* top: 0, right: auto, bottom: 10px, left: auto */
+  display: block;
+  width: 100%;
+}
+
 
 
 </style>
@@ -2477,36 +2512,36 @@ img.mob-location-icon {
 
 
 <div class="mobile">
-  <section >
+  <section>
     <div class="container">
       <div class="row">
-<div class="col-md-4 col-sm-6 col-xs-12 office-block text-center">
-          <div class="single_feature" style="height: 281px;">
-           <div class="feature_icon">
-  <i class="fa fa-map-marker-alt" style="font-size:40px; color: var(--wp--preset--color--vivid-red);"></i>
-</div>
+        <!-- Head Office -->
+        <div class="col-md-4 col-sm-6 col-xs-12 office-block text-center">
+          <div class="single_feature" style="height: 281px; text-align: center;">
+            <div class="feature_icon">
+              <i class="fa fa-map-marker-alt" style="font-size:40px; color: var(--wp--preset--color--vivid-red);"></i>
+            </div>
             <h3>Head Office</h3>
             <p>Village Pooth, Garhmukteshwar, Hapur, UP, INDIA</p>
           </div>
-        </div><!-- END COL-->
-<div class="col-md-4 col-sm-6 col-xs-12 office-block text-center">
-          <div class="single_feature">
+        </div>
+
+        <!-- Site Office -->
+        <div class="col-md-4 col-sm-6 col-xs-12 office-block text-center">
+          <div class="single_feature" style="height: 281px; text-align: center;">
             <div class="feature_icon">
-  <i class="fa fa-map-marker-alt" style="font-size:40px; color: var(--wp--preset--color--vivid-red);"></i>
-</div>
+              <i class="fa fa-map-marker-alt" style="font-size:40px; color: var(--wp--preset--color--vivid-red);"></i>
+            </div>
             <h3>Site Office</h3>
-            <p></p>E-196, Sector-21, Noida - 201301, UP, India</p>
+            <p>E-196, Sector-21, Noida - 201301, UP, India</p>
           </div>
-        </div><!-- END COL-->
-        
-        
+        </div>
 
       </div>
-      <!--- END ROW -->
     </div>
-    <!--- END CONTAINER -->
   </section>
 </div>
+
 
 <section
   class="elementor-section elementor-top-section elementor-element elementor-element-8119522 elementor-section-full_width elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no"
