@@ -3007,31 +3007,45 @@ img.camp {
 
 /* ---------- Mobile Responsive ---------- */
 @media (max-width: 768px) {
-   .two-section__left,
-   .two-section__right {
-      float: none;
-      width: 100%;
-      min-height: auto;
-   }
+  .two-section__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
-   .two-section__content-box {
-      padding: 40px 20px;
-      margin-top: -20px;
-   }
+  .two-section__left,
+  .two-section__right {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: stretch; /* Ensures full height */
+  }
 
-   .two-section__title,
-   .two-section__title1 {
-      font-size: 28px;
-      line-height: 36px;
-   }
+  .two-section__content-box {
+    padding: 40px 20px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Fill full height of parent */
+    width: 100%;
+  }
 
-   .two-section__sub-title,
-   .two-section__sub-title1 {
-      font-size: 17px;
-      width: 85%;
-      margin: 0 auto;
-   }
+  .two-section__title,
+  .two-section__title1 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 15px;
+  }
+
+  .two-section__sub-title,
+  .two-section__sub-title1 {
+    font-size: 17px;
+    line-height: 28px;
+    width: 85%;
+    margin: 0 auto;
+  }
 }
+
 </style>
 
 <div class="desktop">
@@ -3093,6 +3107,7 @@ At SOUL NGO, we believe education is the most powerful tool for change. It empow
 </div>
                </section>
             </div>
+            
 
             <style>
                a {
